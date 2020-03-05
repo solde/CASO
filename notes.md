@@ -30,7 +30,7 @@ A thread is composed by:
 - Control register/flags
 - Integers
 - Floating point numbers
-- Multimedia extensions
+- [Multimedia extensions](https://www.youtube.com/watch?v=DexYsSvXDjQ&t=)
 - [SIMD extensions](https://ca.wikipedia.org/wiki/SIMD) 
 
 ---
