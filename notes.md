@@ -51,8 +51,6 @@ A thread is composed by:
 
 ##### Hybrid environment
 - Managed by pthreads
-    
-
 
 ---
 
