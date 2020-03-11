@@ -33,6 +33,25 @@ A thread is composed by:
 - [Multimedia extensions](https://www.youtube.com/watch?v=DexYsSvXDjQ&t=)
 - [SIMD extensions](https://ca.wikipedia.org/wiki/SIMD) 
 
+##### Properties
+- Priority
+- Quantum -> Maximum amount of time between the begin of running time and the moment that the OS considers changing context.
+
+##### Threads offered by OS interface
+- Caution -> clock interruptions
+- Can be assigned to a core
+
+##### Threads offered by system
+- Shares all resources
+- Can demand resources for the process
+- Can release resources
+- Must be synchronized access to shared data and shared resources
+
+#### Levels of threads
+
+##### Hybrid environment
+- Managed by pthreads
+
 ---
 
 ## Activities
