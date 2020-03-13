@@ -44,17 +44,17 @@ memory-management.c:62:41: error: called object is not a function or function po
 
         Falta una coma entre els arguments "VM_PROT_DEFAULT" i "VM_PROT_ALL"
 
-5. (COPIAR)
+5. Un   cop   arreglat   el   problema   de   la   pregunta   anterior,   comproveu   que   el   programa   memory-management.c funciona correctament. Aquest programa usa  host_processors  i  vm_map  de formaintercalada, per demanar memòria 8 cops. L’ús de processor_info per demanar memòria queda foradel seu ús habitual, però funciona correctament. Responeu:
 
-        1. Cada crida a host_processors assigna 0x1000 bites de memória.
-        2. Cada crida a vm_map assigna 0x2000 bites de memória.
-        3. Assigna adreces a partir de la 0x12e0000.
-        4. Si, son posicions de memória contigues.
-        5. Es poden assignar permisos de lectura, escriptura, execució, no_change (bloqueja la pagina) i notificacio (notifica l'us).
-        6. Dona un "Segmentation fault", ja que s'intenta escriure en una zona reservada només per lectura.
+        **1. Quanta memòria assigna al procés cada crida a host_processors?** Cada crida a host_processors assigna 0x1000 bites de memória.
+        **2. Quanta memòria assigna al procés cada crida a vm_map?** Cada crida a vm_map assigna 0x2000 bites de memória.
+        **3. AQuines adreces ens dóna el sistema en cada crida (host_processors i vm_map)?** Assigna adreces a partir de la 0x12e0000.
+        **4. Són pàgines consecutives? (pista: us ajudarà, incrementar el número d’iteracions que fa elprograma... per veure la seqüència d’adreces més clara)** Si, son posicions de memória contigues.
+        **5. Quines proteccions podem demanar a l’assignar memòria a un procés Mach? (pista: veieu elfitxer <mach/vm_prot.h>) Es poden assignar permisos de lectura, escriptura, execució, no_change (bloqueja la pagina)** i notificacio (notifica l'us).
+        **6. Després, afegiu una crida a vm_protect (...) per tal de desprotegir la memòria per escriptura ique el programa torni a permetre les escriptures en la memòria assignada. Proveu la nova versió icomproveu que ara torna a funcionar correctament.** Canvieu el programa per a que la memòria demanada sigui de només lectura. Quin error us dónael sistema quan executeu aquesta nova versió del programa? Dona un "Segmentation fault", ja que s'intenta escriure en una zona reservada només per lectura.
         7. Ha ha funciona
 
-8. (COPIAR)
+8. Feu   un   programa   que   creï   un   flux   (thread_create)   i   li   canviï   l'estat   (uesp,   eip)   amb   les   cridesthread_get_state i thread_set_state, per engegar-lo posteriorment (thread_resume).
         
 
 
