@@ -20,26 +20,26 @@ $ write-to-disk2  /tmp/file2.dat
 
 **4. Modifiqueu   el(s)   programa(es)   per   poder   canviar   la   mida   de   les   dades   escrites   al   disc.   Un   copexecutat(s) amb les diferents mides, per exemple (0.5, 1, 2, 4 Gbytes, si teniu espai al disc), feu unagràfica amb els resultats que obteniu de bandwidth. A l'eix de les X situeu el tamany de les dadestransmeses i a l'eix de les Y, el bandwidth. Podeu usar LibreOffice scalc, el GNU plot, el jgraph... icomparar els resultats que obteniu amb el vostre company de laboratori.**
 
-0.500000GB: 123941070 - 122197832 = 1743238us
+0.500000GB: 123941070 - 122197832 = 1743238us | BW = 0.2868 GB/s
 
-1.000000GB: 127381697 - 123941102 = 3440595us
+1.000000GB: 127381697 - 123941102 = 3440595us | BW = 0.2906 GB/s
 
-2.000000GB: 134445890 - 127381710 = 7064180us
+2.000000GB: 134445890 - 127381710 = 7064180us | BW = 0.2831 GB/s
 
-3.000000GB: 144635254 - 134445902 = 10189352us
+3.000000GB: 144635254 - 134445902 = 10189352us | BW = 0.2944 GB/s
 
-4.000000GB: 158870605 - 144635265 = 14235340us
+4.000000GB: 158870605 - 144635265 = 14235340us | BW = 0.281 GB/s
 
 **5. Si executeu el programa com a administradors (root), obteniu alguna diferència en elsresultats?**
 
-0.500000GB: 1221794916 - 1219168865 = 2626051us
+0.500000GB: 1221794916 - 1219168865 = 2626051us | BW = 0.1904 GB/s
 
-1.000000GB: 1226942045 - 1221794955 = 5147090us
+1.000000GB: 1226942045 - 1221794955 = 5147090us | BW = 0.1943 GB/s
 
-2.000000GB: 1237131855 - 1226942059 = 10189796us
+2.000000GB: 1237131855 - 1226942059 = 10189796us | BW = 0.1963 GB/s
 
-3.000000GB: 1251831462 - 1237131871 = 14699591us
+3.000000GB: 1251831462 - 1237131871 = 14699591us | BW = 0.2041 GB/s
 
-4.000000GB: 1272716397 - 1251831482 = 20884915us
+4.000000GB: 1272716397 - 1251831482 = 20884915us | BW = 0.1915 GB/s
 
 ![plot](plot.png)
