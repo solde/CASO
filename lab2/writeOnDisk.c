@@ -24,11 +24,12 @@ int main(){
 
         int time2 = gettimeofday(&tp2, NULL);
         int sec = (tp2.tv_sec * 1000000 + tp2.tv_usec) - (tp1.tv_sec * 1000000 + tp1.tv_usec);
-        printf("%fGB: %d - %d = %d\n", j, tp2.tv_sec * 1000000 + tp2.tv_usec, tp1.tv_sec * 1000000 + tp1.tv_usec, sec);
+        double BW = (j)/(sec/1000000);
+        printf("%fGB: %d - %d = %d \t BW=%fGB/s\n", j, tp2.tv_sec * 1000000 + tp2.tv_usec, tp1.tv_sec * 1000000 + tp1.tv_usec, sec, BW);
 
         if(j == 0.5)j=0;
     }
-    
     fclose(ptr);
+    system(" rm -rf /tmp/tmpFile.dat");
     return 0;
 }

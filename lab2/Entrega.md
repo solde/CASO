@@ -14,9 +14,7 @@ En canvia la cira a sistema no es compilada ni implementada per nosaltres, pel q
 
 **3.A la darrera transparència del tema Virtualització-Sincronització-MesuresdeRendiment (transp. 50)us demanem que feu un programa que escrigui al disc 500MBytes, mesurant el temps que triga afer-ho. Des d'un usuari no privilegiat (no root), executeu el vostre programa sobre un fitxer en el disc de la màquina que feu servir per aquest laboratori. Per exemple, podeu fer-ho sobre un fitxer enel directori /tmp. Si teniu dues versions del codi, una desenvolupada per cada membre del grup:**
 
-$ write-to-disk1  /tmp/file1.dat
-
-$ write-to-disk2  /tmp/file2.dat
+[writeOnDisk.c](writeOnDisk.c)
 
 **4. Modifiqueu   el(s)   programa(es)   per   poder   canviar   la   mida   de   les   dades   escrites   al   disc.   Un   copexecutat(s) amb les diferents mides, per exemple (0.5, 1, 2, 4 Gbytes, si teniu espai al disc), feu unagràfica amb els resultats que obteniu de bandwidth. A l'eix de les X situeu el tamany de les dadestransmeses i a l'eix de les Y, el bandwidth. Podeu usar LibreOffice scalc, el GNU plot, el jgraph... icomparar els resultats que obteniu amb el vostre company de laboratori.**
 
