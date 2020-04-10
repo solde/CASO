@@ -1,0 +1,7 @@
+set_robust_list(0x7f44bfff39e0, 24)     = 0
+futex(0x7f44c0a50908, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x7f44c0a50908, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7f44c0a50930, FUTEX_WAKE_PRIVATE, 1) = 0
+madvise(0x7f44bf7f3000, 8368128, MADV_DONTNEED) = 0
+exit(0)                                 = ?
++++ exited with 0 +++

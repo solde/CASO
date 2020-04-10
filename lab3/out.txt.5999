@@ -1,0 +1,26 @@
+set_robust_list(0x7f44c07f49e0, 24)     = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=267342, ...}) = 0
+mmap(NULL, 267342, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f44c09e2000
+close(3)                                = 0
+mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7f44b6ff2000
+munmap(0x7f44b6ff2000, 16834560)        = 0
+munmap(0x7f44bc000000, 50274304)        = 0
+mprotect(0x7f44b8000000, 135168, PROT_READ|PROT_WRITE) = 0
+openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=874264, ...}) = 0
+mmap(NULL, 103152, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44befd8000
+mmap(0x7f44befdb000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f44befdb000
+mmap(0x7f44befec000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f44befec000
+mmap(0x7f44beff0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17000) = 0x7f44beff0000
+close(3)                                = 0
+mprotect(0x7f44beff0000, 4096, PROT_READ) = 0
+munmap(0x7f44c09e2000, 267342)          = 0
+futex(0x7f44c0a50908, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7f44beff1060, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7f44c0a50930, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0x7f44c0a50930, FUTEX_WAKE_PRIVATE, 1) = 0
+madvise(0x7f44bfff4000, 8368128, MADV_DONTNEED) = 0
+exit(0)                                 = ?
++++ exited with 0 +++

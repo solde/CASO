@@ -6,13 +6,14 @@
 
 int main(){
     FILE *ptr;
-    ptr = fopen("/tmp/tmpFile.dat", "w+");
+    //ptr = fopen("/mnt/usb/tmpFile.dat", "w+");
+    ptr = fopen("/tmp/tmpFIle.dat", "w");
     if(ptr == NULL){
         printf("ptr==NULL\n");
         return 0;
     }
 
-    for(double j = 0.5; j < 5; ++j){
+    for(double j = 0.5; j < 1; ++j){
         struct timeval tp1;
         struct timeval tp2;
         int time1 = gettimeofday(&tp1, NULL);
@@ -30,6 +31,6 @@ int main(){
         if(j == 0.5)j=0;
     }
     fclose(ptr);
-    system(" rm -rf /tmp/tmpFile.dat");
+    system("rm -rf /tmp/tmpFile.dat");
     return 0;
 }
