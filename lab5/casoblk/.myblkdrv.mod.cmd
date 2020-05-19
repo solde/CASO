@@ -1,0 +1,1 @@
+cmd_/home/david/Desktop/caso/lab5/casoblk/myblkdrv.mod := { echo  /home/david/Desktop/caso/lab5/casoblk/interface.o /home/david/Desktop/caso/lab5/casoblk/implementation.o; echo; } > /home/david/Desktop/caso/lab5/casoblk/myblkdrv.mod

@@ -1,0 +1,17 @@
+1.  Ok
+2.  Simplemente no lee
+3.  No hay IO error
+4.  No hay IO error
+5.  Ok
+6.  Ok
+7.  Ok
+8.  Ok
+9.  Ok
+10. Ok
+11. Ok
+12. Ok
+13. Ok
+14. No te deja porque está siendo usado por el mount
+15. Ok, reiserfs y reiser4 no están instalados y por tanto falla. Se puede instalar usando el gestor de paquetes. El paquete de reiserfs es reiserfs en ubuntu.
+16. Ok, la partición la crea de la linea 58 a la linea 66 de check_partition.sh
+
