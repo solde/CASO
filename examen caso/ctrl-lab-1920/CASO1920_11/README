@@ -1,0 +1,64 @@
+fd-top - file descriptor top command
+------------------------------------
+
+
+fd-top is a shell script that runs in Linux - or systems with the /proc
+information directory.
+
+It lists the processes selected, with its owner, state, virtual memory
+information, and open file descriptors, and the files they point to. It uses
+a format similat to that of the 'top' command.
+
+
+Command line options:
+
+
+Us: ./fd-top.sh [info-options] [ps-process-selection-options] | -h | --help
+  info selection:    --vm            show vminfo only
+                     --fd            show file descriptors only
+  process selection: -e              all processes
+                     -u <username>   all processes running as user
+                     -t <pts/N>      all processes running in tty
+
+  "info-options" need to be provided before any "ps-process-selection-options".
+
+
+Interactive keys:
+
+Pressing the key 'q' while running stops the command.
+
+Pressing the key 's' while running allows to change the refresh interval.
+
+Example:
+
+If the current terminal is pts/8,
+
+
+$ cat | cat | less &     # pipeline to observe with fd-top.sh
+$ fd-top.sh -t pts/8
+
+ PID   COMM   USER   S vmpeak vmsz vmlck vmpin vmrss vmdata vmstk vmexe vmlib
+1404   bash     xavim S 20736 20672    0     0  3584    580  132   964  2180 
+        fd:  (0)/dev/pts/1 (1)/dev/pts/1 (2)/dev/pts/1
+16802  cat      xavim T  4832  4832    0     0   684    320  132    48  1940 
+        fd:  (0)/dev/pts/1 (1)pipe:[426023] (2)/dev/pts/1
+16803  cat      xavim T  4480  4404    0     0   776    184  132    48  1940 
+        fd:  (0)pipe:[426023] (1)pipe:[426024] (2)/dev/pts/1 (3)/usr/lib64/locale/en_US/LC_NAME
+16804  less     xavim T  7040  7040    0     0   568     56  132   136  2332 
+        fd:  (0)pipe:[426024] (1)/dev/pts/1 (2)/dev/pts/1
+16805  fd-top.s xavim S 12104 12040    0     0  2896    368  132   964  1972 
+        fd:  (0)/dev/pts/1 (1)/dev/pts/1 (2)/dev/pts/1 (3)pipe:[423742]
+
+
+Meaning of the fields:
+
+vmpeak: the maximum amount of virtual memory ever requested by the process
+vmsz:   current amount of virtual memory
+vmlck:  amount of memory locked (always present)
+vmpin:  ?
+vmrss:  amount of memory currently resident (present)
+vmdata: current data size
+vmstk:  current stack size
+vmexe:  size of the executable segment
+vmlib:  size of the libraries region
+

@@ -1,0 +1,41 @@
+Benvolguts/Benvolgudes,
+
+un cop descarregat i obert aquest enunciat, haureu de descomprimir també 
+el fitxer que conté els exemples sobre els quals es fan els exercicis. Tindreu
+   
+   ctrl-lab-1920.tar.bz2   que conté el directori CASO1920_11/
+
+   o bé
+
+   ctrl-lab-1920-12.tar.bz2  que conté el directori CASO1920_12/
+
+Disposeu de dues versions de l'enunciat, en libreoffice odt i pdf. Podeu 
+respondre:
+
+   - modificant el fitxer en format libreoffice odt
+
+   - afegint les respostes als forms del pdf
+
+   - en un fitxer de text pla, indicant bé quina resposta correspon a cada
+pregunta: 2a, 2b, 2c ...
+
+
+Addicionalment, executeu l'script:
+
+   $ ./el-meu-entorn.sh
+
+que generarà un fitxer - el-meu-entorn.txt - amb la descripció del vostre
+entorn. Podeu mirar-lo per veure com ho fa.
+
+Entregueu un fitxer entrega.tar.gz, que contingui:
+
+ - el fitxer pdf, odt o txt amb les vostres respostes, amb el nom sobre el 
+qual heu salvat la feina!!
+
+ - el fitxer el-meu-entorn.txt
+
+
+
+
+Comencem!
+
